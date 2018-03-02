@@ -1,0 +1,40 @@
+html {
+  background-color: pink;
+}
+
+p {
+  color: blue;
+}
+
+span {
+  color: purple;
+}
+
+div {
+  color: palevioletred;
+}
+
+div span {
+  color: orange;
+}
+
+p.banana {
+  color: yellow;
+}
+
+p.spoiled {
+  color: brown;
+}
+
+#apple {
+  color: red;
+}
+
+#orange {
+  color: orange;
+}
+
+#blueberry {
+  color: blueviolet;
+}
+/*# sourceMappingURL=style.css.map */
