@@ -1,0 +1,56 @@
+main {
+    background-color: lightcoral;
+    height: 50vh;
+    position: relative;
+}
+
+.img1 {
+    position: absolute;
+    // top: ;
+    right: 0;
+    bottom: 0;
+    // left: ;
+}
+
+.img2 {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 5;
+}
+
+.img3 {
+    position: absolute;
+    top: 0;
+    // right: 10px;
+    // bottom: 10px;
+    left: 0;
+    z-index: 5;
+}
+.img4 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    // bottom: 10px;
+    // left: ;
+}
+.img5 {
+    //background-color: transparentize($color: lightseagreen, $amount: .5);
+    position: absolute;
+   // top: 0;
+   // right: 0;
+    //bottom: 0;
+    //left: 0;
+
+
+    //Use code below for question as lunch starts
+    top: 50%;
+    // right: 50%;
+    // bottom: 50%;
+    left: 50%;
+    // margin-top: -44px;
+    // margin-right: -44px;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+

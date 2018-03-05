@@ -1,0 +1,39 @@
+main {
+  background-color: lightcoral;
+  height: 50vh;
+  position: relative;
+}
+
+.img1 {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.img2 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 5;
+}
+
+.img3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+
+.img4 {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.img5 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+/*# sourceMappingURL=styles.css.map */
