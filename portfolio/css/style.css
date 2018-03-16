@@ -10,6 +10,10 @@ ul {
   list-style: none;
 }
 
+li {
+  width: 100px;
+}
+
 header {
   background-image: url(../img/vaporwavebg.jpg);
   background-repeat: no-repeat;
@@ -60,7 +64,6 @@ nav#dropdown ul ul li:not(:last-child) {
 
 nav#dropdown ul ul a {
   display: block;
-  padding-right: 20px;
   transition: all 250ms;
   box-sizing: border-box;
 }
@@ -79,6 +82,11 @@ nav#dropdown ul a {
 }
 
 nav#dropdown ul a:hover {
-  background-color: #bfbfbf;
+  background-color: #404040;
+}
+
+div#HomeText p {
+  background-color: rgba(143, 65, 146, 0.5);
+  float: right;
 }
 /*# sourceMappingURL=style.css.map */
