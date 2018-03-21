@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+}
+
+button {
+  border: 1px solid darkena(#303030, 10);
+  border-radius: 4px;
+  padding: 10px;
+  font-size: inherit;
+}
+
+button:hover {
+  background-color: #d6d6d6;
+  cursor: pointer;
+}
+
+h1 {
+  height: 100px;
+  width: 500px;
+  background-size: cover;
+  padding: 25px;
+  transition: width 250ms, height 250ms, background-color 500ms;
+}
+
+h1.hidden {
+  background-color: rgba(48, 48, 48, 0.1);
+  color: black;
+}
+
+h1.nothidden {
+  background-color: #303030;
+  color: white;
+}
+
+h1.sizeAlter {
+  height: 250px;
+  width: 250px;
+  background-color: blue;
+}
+
+body {
+  background-color: white;
+  transition: background-color 500ms;
+}
+
+body.colorize {
+  background-color: red;
+}
+
+nav {
+  padding: 10px;
+  background-color: #303030;
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav.flexStart {
+  justify-content: flex-start;
+}
+/*# sourceMappingURL=style.css.map */

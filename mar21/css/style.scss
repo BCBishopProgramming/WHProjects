@@ -1,0 +1,65 @@
+$black: hsla(0, 0%, 19%, 1);
+
+body {
+    margin: 0;
+}
+
+button {
+    border: 1px solid darkena($black, 10);
+    border-radius: 4px;
+    padding: 10px;
+    font-size: inherit;
+    &:hover {
+        background-color: lighten($black, 65);
+        // cursor: pointer;
+        cursor: pointer;
+    }
+}
+
+h1 {
+    height: 100px;
+    width: 500px;
+    background-size: cover;
+    padding: 25px;
+    transition: width 250ms, height 250ms, background-color 500ms;
+    // transition: height 2s;
+}
+
+h1.hidden {
+    background-color: hsla(0, 0%, 19%, .1);
+    color: black;
+}
+
+h1.nothidden {
+    // height: 100px;
+    // width: 500px;
+    background-color: hsla(0, 0%, 19%, 1);
+    color: white;
+}
+
+h1.sizeAlter {
+    height: 250px;
+    width: 250px;
+    background-color: blue;
+}
+
+
+body {
+    background-color: white;
+    transition: background-color 500ms;
+}
+
+body.colorize {
+    background-color: red;
+}
+
+nav {
+    padding: 10px;
+    background-color: hsla(0, 0%, 19%, 1);
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav.flexStart {
+    justify-content: flex-start;
+}
