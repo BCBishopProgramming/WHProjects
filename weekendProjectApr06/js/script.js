@@ -59,7 +59,7 @@ function pageTwo(){
 }
 
 function pageThree(){
-    console.log("This works");
+    narrator.innerHTML = "To Be Continued..."
 }
 
 
