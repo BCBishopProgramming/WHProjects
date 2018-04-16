@@ -1,1 +1,35 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css?family=Orbitron");
+body {
+  font-family: 'Orbitron', sans-serif;
+  background-color: black;
+  color: white;
+}
+
+h1 {
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 10px solid white;
+  border-top: 5px solid white;
+  border-bottom: 5px solid white;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+ul li {
+  border: 2px solid white;
+  padding: 10px;
+  font-size: 150%;
+}
+
+ul li.hover {
+  color: lightblue;
+  cursor: pointer;
+}
+/*# sourceMappingURL=style.css.map */

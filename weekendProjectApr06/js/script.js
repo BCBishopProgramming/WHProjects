@@ -4,264 +4,182 @@ var narrator = document.getElementById("narrator");
 var opt1 = document.getElementById("opt1");
 var opt2 = document.getElementById("opt2");
 var opt3 = document.getElementById("opt3");
-var reset = document.getElementById("reset"); //Remove Later
 
-//character stat variables
-// var pageCounter = 0;
-// var userRace;
-// var userClass;
+//Character choice variables
+var room;
+var item;
 
-// //Game Page Functions
-// pageOne();
-// function pageOne() {
-//     pageCounter++;
-//     console.log(pageCounter);
-//     //Set page text 
-//     narrator.innerHTML = "Welcome to the Game! Click the buttion below to get started!";
-//     opt1.innerHTML = "";
-//     opt2.innerHTML = "Click here";
-//     opt3.innerHTML = "";
-
-//     //Add new button eventListener
-//     opt2.addEventListener('click', pageTwo);
-// }
-
-// function pageTwo() {
-//     pageCounter++;
-//     console.log(pageCounter);
-//     //Page text display
-//     narrator.innerHTML = "Today you will go on a quest to save the world from the Demon King! But first, tell me more about yourself. Which race were you born to?";
-//     opt1.innerHTML = "The Dwarves";
-//     opt2.innerHTML = "The Elves";
-//     opt3.innerHTML = "The Humans"; 
-
-//     //Reset button eventListener
-//     opt2.removeEventListener('click', pageTwo);
-
-//     //Add new button eventListener
-//     opt1.addEventListener('click', choseDwarves);
-//     opt2.addEventListener('click', choseElves);
-//     opt3.addEventListener('click', choseHumans);
-//     reset.addEventListener('click', resetPage);
-// }
-
-// function pageThree() {
-//     pageCounter++;
-//     console.log(pageCounter);
-//     //Set page text
-//     if(userRace == 'dwarf') {
-//         narrator.innerHTML = "Ah, so you're one of the stout folk who make their homes deep within the mountains. Well, what kind of adventurer did you grow up to become?";
-//         opt1.innerHTML = "A Fighter";
-//         opt2.innerHTML = "A Wizard";
-//         opt3.innerHTML = "A Cleric";
-        
-//         //Add new options
-//         opt1.addEventListener('click', choseFighter);
-//         opt2.addEventListener('click', choseWizard);
-//         opt3.addEventListener('click', choseCleric);
-//     }
-//     else if(userRace == 'elf') {
-//         narrator.innerHTML = "Splendid, so a member of the fair folk has left their realm of nature and eternal youth to help us. As a champion of your people, what class are you?"
-//         opt1.innerHTML = "A Fighter";
-//         opt2.innerHTML = "A Wizard";
-//         opt3.innerHTML = "A Ranger";
-
-//         //Add new options
-//         opt1.addEventListener('click', choseFighter);
-//         opt2.addEventListener('click', choseWizard);
-//         opt3.addEventListener('click', choseRanger);
-//     }
-//     else if(userRace == 'human') {
-//         narrator.innerHTML = "I see, you're one of the short-lived men of the Western Kingdoms. Your kind walk many different paths, so tell me which one you follow."
-//         opt1.innerHTML = "A Fighter";
-//         opt2.innerHTML = "A Ranger";
-//         opt3.innerHTML = "A Cleric";
-
-//         //add new options
-//         opt1.addEventListener('click', choseFighter);
-//         opt2.addEventListener('click', choseRanger);
-//         opt3.addEventListener('click', choseCleric);
-//     }
-// }
-
-
-// function pageFour() {
-//     pageCounter++;
-//     console.log(pageCounter);
-//     //Set page text
-//     narrator.innerHTML = "";
-//     opt1.innerHTML = "";
-//     opt2.innerHTML = "";
-//     opt3.innerHTML = "";
-// }
-
-// //Variable set functions
-
-
-// //Race functions
-// function choseDwarves() {
-//     userRace = 'dwarf';
-//     opt1.removeEventListener('click', choseDwarves);
-//     opt2.removeEventListener('click', choseElves);
-//     opt3.removeEventListener('click', choseHumans);
-//     console.log(userRace);
-//     pageThree();
-    
-// }
-// function choseElves() {
-//     userRace = 'elf';
-//     opt1.removeEventListener('click', choseDwarves);
-//     opt2.removeEventListener('click', choseElves);
-//     opt3.removeEventListener('click', choseHumans);
-//     console.log(userRace);
-//     pageThree();
-// }
-// function choseHumans() {
-//     userRace = 'human';
-//     opt1.removeEventListener('click', choseDwarves);
-//     opt2.removeEventListener('click', choseElves);
-//     opt3.removeEventListener('click', choseHumans);
-//     console.log(userRace);
-//     pageThree();
-// }
-
-// //Class set functions
-
-// function choseFighter() {
-//     userClass = 'fighter';
-//     if(userRace == 'dwarf') {
-//         opt1.removeEventListener('click', choseFighter);
-//         opt2.removeEventListener('click', choseWizard);
-//         opt3.removeEventListener('click', choseCleric);
-//     }
-//     else if(userRace == 'elf') {
-//         opt1.removeEventListener('click', choseFighter);
-//         opt2.removeEventListener('click', choseWizard);
-//         opt3.removeEventListener('click', choseRanger);
-//     }
-//     else if(userRace == 'human') {
-//         opt1.removeEventListener('click', choseFighter);
-//         opt2.removeEventListener('click', choseRanger);
-//         opt3.removeEventListener('click', choseCleric);
-//     }
-//     console.log(userClass);
-//     pageFour();
-// }
-
-// function choseWizard() {
-//     userClass = 'wizard';
-//     if(userRace == 'dwarf') {
-//         opt1.removeEventListener('click', choseFighter);
-//         opt2.removeEventListener('click', choseWizard);
-//         opt3.removeEventListener('click', choseCleric);
-//     }
-//     else if(userRace == 'elf') {
-//         opt1.removeEventListener('click', choseFighter);
-//         opt2.removeEventListener('click', choseWizard);
-//         opt3.removeEventListener('click', choseRanger);
-//     }
-//     else if(userRace == 'human') {
-//         opt1.removeEventListener('click', choseFighter);
-//         opt2.removeEventListener('click', choseRanger);
-//         opt3.removeEventListener('click', choseCleric);
-//     }
-//     console.log(userClass);
-//     pageFour();
-// }
-
-// function choseCleric() {
-//     userClass = 'cleric';
-//     if(userRace == 'dwarf') {
-//         opt1.removeEventListener('click', choseFighter);
-//         opt2.removeEventListener('click', choseWizard);
-//         opt3.removeEventListener('click', choseCleric);
-//     }
-//     else if(userRace == 'elf') {
-//         opt1.removeEventListener('click', choseFighter);
-//         opt2.removeEventListener('click', choseWizard);
-//         opt3.removeEventListener('click', choseRanger);
-//     }
-//     else if(userRace == 'human') {
-//         opt1.removeEventListener('click', choseFighter);
-//         opt2.removeEventListener('click', choseRanger);
-//         opt3.removeEventListener('click', choseCleric);
-//     }
-//     console.log(userClass);
-//     pageFour();
-// }
-
-// function choseRanger() {
-//     userClass = 'ranger';
-//     if(userRace == 'dwarf') {
-//         opt1.removeEventListener('click', choseFighter);
-//         opt2.removeEventListener('click', choseWizard);
-//         opt3.removeEventListener('click', choseCleric);
-//     }
-//     else if(userRace == 'elf') {
-//         opt1.removeEventListener('click', choseFighter);
-//         opt2.removeEventListener('click', choseWizard);
-//         opt3.removeEventListener('click', choseRanger);
-//     }
-//     else if(userRace == 'human') {
-//         opt1.removeEventListener('click', choseFighter);
-//         opt2.removeEventListener('click', choseRanger);
-//         opt3.removeEventListener('click', choseCleric);
-//     }
-//     console.log(userClass);
-//     pageFour();
-// }
-
-
-// //Page Reset
-// function resetPage() {
-//     pageCounter--;
-//     if(pageCounter == 1) {
-//         opt1.removeEventListener('click', choseDwarves);
-//         opt2.removeEventListener('click', choseElves);
-//         opt3.removeEventListener('click', choseHumans);
-//         pageOne();
-//     }
-//     else if(pageCounter == 2) {
-//         if(userRace == 'dwarf') {
-//             opt1.removeEventListener('click', choseFighter);
-//             opt2.removeEventListener('click', choseWizard);
-//             opt3.removeEventListener('click', choseCleric);
-//             pageTwo();
-//         }
-//         else if(userRace == 'elf') {
-//             opt1.removeEventListener('click', choseFighter);
-//             opt2.removeEventListener('click', choseWizard);
-//             opt3.removeEventListener('click', choseRanger);
-//             pageTwo();
-//         }
-//         else if(userRace == 'human') {
-//             opt1.removeEventListener('click', choseFighter);
-//             opt2.removeEventListener('click', choseRanger);
-//             opt3.removeEventListener('click', choseCleric);
-//             pageTwo();
-//         }
-//     }
-// }
-
-
-
-
-
-//Try using array to set page number instead of functions
-var pageNum = [1, 2, 3, 4, 5, 6, 7, 8];
-
-function runGame(){
-    
-        console.log(i);
-        if(i = 0){
-            narrator.innerHTML = "Welcome to the Game! Click the buttion below to get started!";
-            opt1.innerHTML = "";
-            opt2.innerHTML = "Click here";
-            opt3.innerHTML = "";
-        }
-
-
-    
+//Start the page
+pageOne();
+function pageOne() {
+    narrator.innerHTML = "You are a hero that has been captured by the evil Demon King! You know that if you do not find a way to stop him, he's going to destroy the world! Fortunately, in the night a spy has snuck into your prison and given you a parcel with a key to your cell and a magic item. What is that item?";
+    opt1.innerHTML = "An Enchanted Sword";
+    opt2.innerHTML = "A Cloak of Invisibility";
+    opt3.innerHTML = "A Set of Flying Shoes";
+    //Add Decision functions
+    opt1.addEventListener('click', pickSword);
+    opt2.addEventListener('click', pickCloak);
+    opt3.addEventListener('click', pickShoes);
 }
 
-runGame();
+function pageTwo(){
+    opt2.removeEventListener('click', pageTwo);
+    if(item == "sword") {
+        narrator.innerHTML = "As you begin to leave your cell, the door squeaks in protest as the rusty hinges swing open. A guard nearby notices the sound and comes to investigate, but you quickly dispatch him with your new sword. At the end of the row of jail cells you find a door that leads to a small stairwell. You also find another door behind you that seems to lead deeper into the castle. Where do you go?";
+        opt1.innerHTML = "Go up the stairway";
+        opt2.innerHTML = "Go down the stairway";
+        opt3.innerHTML = "Go through the door";
+        
+        //Add Event Listeners
+        opt1.addEventListener('click', pickUpStairs);
+        opt2.addEventListener('click', pickDownStairs);
+        opt3.addEventListener('click', pickDoor);
+    }
+    else if(item =="cloak"){
+        narrator.innerHTML = "As you begin to leave your cell, the door squeaks in protest as the rusty hinges swing open. A guard nearby notices the sound and comes to investigate, but you quickly turn invisible and avoid his attention. Continuing from that point, at the end of the row of jail cells you find a door that leads to a small spiral stairwell. You also find another door behind you that seems to lead deeper into the castle. Where do you go?";
+        opt1.innerHTML = "Go up the stairway";
+        opt2.innerHTML = "Go down the stairway";
+        opt3.innerHTML = "Go through the door";
+        
+        //Add Event Listeners
+        opt1.addEventListener('click', pickUpStairs);
+        opt2.addEventListener('click', pickDownStairs);
+        opt3.addEventListener('click', pickDoor);
+    }
+    else if(item == "shoes"){
+        narrator.innerHTML = "As you begin to leave your cell, the door squeaks in protest as the rusty hinges swing open. A guard nearby notices the sound and comes to investigate, but you quickly take to the air and avoid his grasp. He begins to shout behind for other guards to assist him. Quickly flying away, you find a door that leads to a small spiral stairwell. Do you go up or down the stairs?";
+        opt1.innerHTML = "Go up the stairway";
+        opt2.innerHTML = "----------";
+        opt3.innerHTML = "Go down the stairway";
+        
+        //Add Event Listeners
+        opt1.addEventListener('click', pickUpStairs);
+        opt3.addEventListener('click', pickDownStairs);
+    }
+}
+
+function pageThree(){
+    console.log("This works");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+//Character choice options
+function pickSword() {
+    //set item variable
+    item = "sword";
+    //Describe item to user
+    narrator.innerHTML = "A beautiful sword is wrapped inside the cloth parcel, with the key strung around the hilt. Upon drawing it from its scabbard you notice that the blade glows faintly in the dim light.";
+    opt1.innerHTML = "---------";
+    opt2.innerHTML = "Continue";
+    opt3.innerHTML = "---------";
+    opt1.removeEventListener('click', pickSword);
+    opt2.removeEventListener('click', pickCloak);
+    opt3.removeEventListener('click', pickShoes);
+    opt2.addEventListener('click', pageTwo);
+}
+function pickCloak() {
+    //set item variable
+    item = "cloak";
+    //Describe item to user
+    narrator.innerHTML = "The parcel is a shimmering silver cloak wrapped around the brass key meant for your cell door. When you don the cloak and grasp the silver brooch at its collar, it renders you invisible while you hold onto it.";
+    opt1.innerHTML = "---------";
+    opt2.innerHTML = "Continue";
+    opt3.innerHTML = "---------";
+    opt1.removeEventListener('click', pickSword);
+    opt2.removeEventListener('click', pickCloak);
+    opt3.removeEventListener('click', pickShoes);
+    opt2.addEventListener('click', pageTwo);
+}
+function pickShoes() {
+    //set item variable
+    item = "shoes";
+    //Describe item to user
+    narrator.innerHTML = "The small box contains the brass key meant for your cell door, along with a pair of silk slippers with wings embroidered on the sides. Putting them on your feet, the wings begin flapping and you gently begin to float off of the ground.";
+    opt1.innerHTML = "---------";
+    opt2.innerHTML = "Continue";
+    opt3.innerHTML = "---------";
+    opt1.removeEventListener('click', pickSword);
+    opt2.removeEventListener('click', pickCloak);
+    opt3.removeEventListener('click', pickShoes);
+    opt2.addEventListener('click', pageTwo);
+}
+
+function pickUpStairs(){
+    room = "tower";
+    if(item == "shoes"){
+        narrator.innerHTML = "With pursuit hot on your heels you decide to fly up the stairs, eventually reaching a small workroom at the top of the tower. You slam the door behind you and after a moment you can hear the guards behind you, attempting to break it down!";
+        opt1.innerHTML = "----------";
+        opt2.innerHTML = "Continue";
+        opt3.innerHTML = "----------";
+
+
+        opt1.removeEventListener('click', pickUpStairs);
+        opt3.removeEventListener('click', pickDownStairs);
+        opt2.addEventListener('click', pageThree);
+    }
+    else{
+    narrator.innerHTML = "You quickly ascend the stairs and reach a small workshop. There doesn't seem to be any way to continue in this direction, but you see a few things that catch your attention."
+    opt1.innerHTML = "----------";
+    opt2.innerHTML = "Continue";
+    opt3.innerHTML = "----------";
+
+    opt1.removeEventListener('click', pickUpStairs);
+    opt2.removeEventListener('click', pickDownStairs);
+    opt3.removeEventListener('click', pickDoor);
+    opt2.addEventListener('click', pageThree);
+    }
+}
+function pickDownStairs(){
+    room = "hall";
+    if(item == "shoes"){
+        narrator.innerHTML = "You decide to fly down the stairs to evade the guards, and reach the castle's entrance hall after a few moments. The ceiling is high enough to continue evading the pursuing guards, but the front gate is closed!"
+        opt1.innerHTML = "----------";
+        opt2.innerHTML = "Continue";
+        opt3.innerHTML = "----------";
+
+
+        opt1.removeEventListener('click', pickUpStairs);
+        opt3.removeEventListener('click', pickDownStairs);
+        opt2.addEventListener('click', pageThree);
+    }
+    else{
+        narrator.innerHTML = "You descend the flight of stairs and arrive in what appears to be the entrance hall of the castle. While the front gates seem to be closed and barred, there don't seem to be any guards at the moment."
+        opt1.innerHTML = "----------";
+        opt2.innerHTML = "Continue";
+        opt3.innerHTML = "----------";
+
+        opt1.removeEventListener('click', pickUpStairs);
+        opt2.removeEventListener('click', pickDownStairs);
+        opt3.removeEventListener('click', pickDoor);
+        opt2.addEventListener('click', pageThree);
+    }
+}
+function pickDoor(){
+    room = "throne";
+    if(item == "sword"){
+        narrator.innerHTML = "You pass through the door and see a posting of three guards watching the next door. It won't be long before they notice you after the noise you just made fighting in the last room."
+        opt1.innerHTML = "----------";
+        opt2.innerHTML = "Continue";
+        opt3.innerHTML = "----------";
+    }
+    else if(item == "cloak"){
+        narrator.innerHTML = "The door leads to a small corridor with a patrol of three guards watching the far door. They don't seem to notice anything amiss and are paying no attention to your direction."
+        opt1.innerHTML = "----------";
+        opt2.innerHTML = "Continue";
+        opt3.innerHTML = "----------";
+    }
+    opt1.removeEventListener('click', pickUpStairs);
+    opt2.removeEventListener('click', pickDownStairs);
+    opt3.removeEventListener('click', pickDoor);
+    opt2.addEventListener('click', pageThree);
+}
