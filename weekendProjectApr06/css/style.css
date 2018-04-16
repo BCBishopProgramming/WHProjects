@@ -28,7 +28,7 @@ ul li {
   font-size: 150%;
 }
 
-ul li.hover {
+ul li:hover {
   color: lightblue;
   cursor: pointer;
 }
